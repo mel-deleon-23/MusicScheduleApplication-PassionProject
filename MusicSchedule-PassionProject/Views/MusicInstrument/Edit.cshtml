@@ -1,0 +1,21 @@
+﻿@model MusicSchedule_PassionProject.Models.ViewModels.UpdateInstrument
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form action="/MusicInstrument/Update/@Model.SelectedInstrument.InstrumentID" method="POST">
+    <div>
+        <label>Instrument ID: </label> <input type="number" name="InstrumentID" value="@Model.SelectedInstrument.InstrumentID" />
+    </div>
+    <div>
+        <label>Instrument Type: </label> <input type="text" name="InstrumentType" value="@Model.SelectedInstrument.InstrumentType" />
+    </div>
+
+    <div>
+        <input type="submit" value="Update Instrument" />
+
+    </div>
+</form>

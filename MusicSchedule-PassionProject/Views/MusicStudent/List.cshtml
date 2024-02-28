@@ -1,0 +1,55 @@
+﻿@model IEnumerable<MusicSchedule_PassionProject.Models.MusicStudentDto>
+@{
+    ViewBag.Title = "List";
+}
+
+<style>
+    table {
+        width: 50%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<h2>Student List</h2>
+
+<a href="/MusicStudent/New">New Student</a>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Instrument ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var MusicStudent in Model)
+        {
+            <tr>
+                <td>@MusicStudent.MStudentID</td>
+                <td>
+                    <a href="/MusicStudent/Details/@MusicStudent.MStudentID">
+                        @MusicStudent.MStudentFName @MusicStudent.MStudentLName
+                    </a>
+                </td>
+                <td>
+                    <a href="/MusicInstrument/Details/@MusicStudent.InstrumentID">
+                        @MusicStudent.InstrumentID
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

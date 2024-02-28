@@ -1,0 +1,30 @@
+﻿@model MusicSchedule_PassionProject.Models.ViewModels.UpdateMusicStudent
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form action="/MusicStudent/Update/@Model.SelectedMusicStudent.MStudentID" method="POST">
+    <div style="display:none">
+        <input type="number" name="MStudentID" value="@Model.SelectedMusicStudent.MStudentID" />
+    </div>
+    <div>
+        <label>First Name: </label>
+        <input type="text" name="MStudentFName" value="@Model.SelectedMusicStudent.MStudentFName" />
+    </div>
+    <div>
+        <label>Last Name: </label>
+        <input type="text" name="MStudentLName" value="@Model.SelectedMusicStudent.MStudentLName" />
+    </div>
+    <div>
+        <label>Instrument ID: </label>
+        <input type="number" name="InstrumentID" value="@Model.SelectedMusicStudent.InstrumentID" />
+    </div>
+
+    <div>
+        <input type="submit" value="Update Music Student" />
+
+    </div>
+</form>

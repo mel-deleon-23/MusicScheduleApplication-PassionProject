@@ -1,0 +1,48 @@
+﻿@model MusicSchedule_PassionProject.Models.ViewModels.DetailsInstrument
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<style>
+    table {
+        width: 30%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<a href="/MusicInstrument/List">Go back</a>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Instrument ID</th>
+            <th>Instrument Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.SelectedInstrument.InstrumentID</td>
+            <td>@Model.SelectedInstrument.InstrumentType</td>
+
+        </tr>
+    </tbody>
+
+</table>
+
+<br />
+
+<a href="/MusicInstrument/Edit/@Model.SelectedInstrument.InstrumentID" class="btn btn-success">Update</a>
+
+<a href="/MusicInstrument/DeleteConfirm/@Model.SelectedInstrument.InstrumentID" class="btn btn-danger">Delete</a>

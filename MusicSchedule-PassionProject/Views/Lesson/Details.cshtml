@@ -1,0 +1,56 @@
+﻿@model MusicSchedule_PassionProject.Models.ViewModels.DetailsLesson
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<a href="/Lesson/List">Go back</a>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Lesson ID</th>
+            <th>Lesson Name</th>
+            <th>Lesson Description</th>
+            <th>Lesson Time</th>
+            <th>Instructor</th>
+            <th>Student ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.SelectedLesson.LessonId</td>
+            <td>@Model.SelectedLesson.LessonName</td>
+            <td>@Model.SelectedLesson.LessonDescription</td>
+            <td>@Model.SelectedLesson.LessonTime</td>
+            <td>@Model.SelectedLesson.LessonInstructor</td>
+            <td><a href="/MusicStudent/Details/@Model.SelectedLesson.MStudentID">@Model.SelectedLesson.MStudentID</a></td>
+
+        </tr>
+    </tbody>
+
+</table>
+
+<br />
+
+<a href="/Lesson/Edit/@Model.SelectedLesson.LessonId" class="btn btn-success">Update</a>
+
+<a href="/Lesson/DeleteConfirm/@Model.SelectedLesson.LessonId" class="btn btn-danger">Delete</a>

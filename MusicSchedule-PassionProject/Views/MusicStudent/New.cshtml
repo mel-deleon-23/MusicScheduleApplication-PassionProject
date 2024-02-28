@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>Add New Student</h2>
+
+<form action="/MusicStudent/Create" method="POST">
+    @*<div>
+        <label>Student ID: </label> <input type="number" name="MStudentID" />
+    </div>*@
+    <div>
+        <label>First Name: </label> <input name="MStudentFName" />
+    </div>
+    <div>
+        <label>Last Name: </label> <input name="MStudentLName" />
+    </div>
+    <div>
+        <label>Instrument ID: </label> <input name="InstrumentID" />
+    </div>
+
+    <div>
+        <input type="submit" value="Add Student" />
+
+    </div>
+</form>

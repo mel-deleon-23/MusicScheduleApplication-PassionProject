@@ -1,0 +1,17 @@
+﻿@model MusicSchedule_PassionProject.Models.MusicInstrumentDto
+
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<h2>Are your sure your want to delete this instrument?</h2>
+
+<h2>@Model.InstrumentType</h2>
+<div>Instrument ID: @Model.InstrumentID</div>
+
+
+<a href="/MusicInstrument/List">Cancel</a>
+
+<form action="/MusicInstrument/Delete/@Model.InstrumentID" method="POST">
+    <input type="submit" value="Confirm Delete" />
+</form>

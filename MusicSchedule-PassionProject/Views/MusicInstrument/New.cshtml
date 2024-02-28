@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>Add New Instrument</h2>
+
+<form action="/MusicInstrument/Create" method="POST">
+    <div>
+        <label>Instrument ID: </label> <input type="number" name="InstrumentID" />
+    </div>
+    <div>
+        <label>Instrument Type: </label> <input name="InstrumentType" />
+    </div>
+
+    <div>
+        <input type="submit" value="Add Instrument" />
+
+    </div>
+</form>
